@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black min-h-screen flex items-center justify-center p-4 font-['Inter']">
+    <div class="calculator-container w-full max-w-md">
+        <div class="header mb-6 text-center">
+            <h1 class="text-3xl font-bold text-white mb-2">Modern Calculator</h1>
+            <p class="text-gray-400">A sleek calculator with advanced features</p>
+        </div>
+        
+        <div class="calculator bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
+            <!-- Display -->
+            <div class="display p-6 bg-gray-900">
+                <div class="previous-operand text-gray-400 text-right text-lg h-7 overflow-hidden"></div>
+                <div class="current-operand text-white text-right text-4xl font-semibold h-14 overflow-hidden">0</div>
+            </div>
+            
+            <!-- Controls -->
+            <div class="controls p-5 grid grid-cols-4 gap-3">
+                <!-- Row 1 -->
+                <button class="function bg-gray-700 hover:bg-gray-600 text-gray-300" data-action="clear">C</button>
+                <button class="function bg-gray-700 hover:bg-gray-600 text-gray-300" data-action="backspace">
+                    <i class="fas fa-backspace"></i>
+                </button>
+                <button class="function bg-gray-700 hover:bg-gray-600 text-gray-300" data-action="percentage">%</button>
+                <button class="operator bg-purple-600 hover:bg-purple-500 text-white" data-action="divide">÷</button>
+                
+                <!-- Row 2 -->
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="7">7</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="8">8</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="9">9</button>
+                <button class="operator bg-purple-600 hover:bg-purple-500 text-white" data-action="multiply">×</button>
+                
+                <!-- Row 3 -->
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="4">4</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="5">5</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="6">6</button>
+                <button class="operator bg-purple-600 hover:bg-purple-500 text-white" data-action="subtract">−</button>
+                
+                <!-- Row 4 -->
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="1">1</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="2">2</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number="3">3</button>
+                <button class="operator bg-purple-600 hover:bg-purple-500 text-white" data-action="add">+</button>
+                
+                <!-- Row 5 -->
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white col-span-2" data-number="0">0</button>
+                <button class="number bg-gray-700 hover:bg-gray-600 text-white" data-number=".">.</button>
+                <button class="equals bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white" data-action="equals">=</button>
+            </div>
+            
+            <!-- Additional Functions -->
+            <div class="additional-functions p-4 bg-gray-900 border-t border-gray-700 grid grid-cols-3 gap-3">
+                <button class="function bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm py-2" data-action="square">x²</button>
+                <button class="function bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm py-2" data-action="squareRoot">√x</button>
+                <button class="function bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm py-2" data-action="toggleSign">±</button>
+            </div>
+        </div>
+        
+        <div class="footer mt-6 text-center text-gray-500 text-sm">
+            <p>Modern Calculator • Supports keyboard input</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
